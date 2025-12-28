@@ -19,10 +19,10 @@ x = x[:len(df)-predictionDays]
 print(x)
 
 y = np.array(df['Prediction'])
-# Get all the values except last 'n' rows
+
 y = y[:-predictionDays]
 print(y)
-# Split the data into 80% training and 20% testing
+
 from sklearn.model_selection import train_test_split
 xtrain, xtest, ytrain, ytest = train_test_split(x,y, test_size = 0.2)
 # set the predictionDays array equal to last 30 rows from the original data set
