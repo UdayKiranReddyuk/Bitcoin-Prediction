@@ -3,15 +3,10 @@ import pandas as pd
 df = pd.read_csv("/content/drive/MyDrive/Project AIML/bitcoin.csv")
 df.head()
 
-# prompt: Using dataframe df: df.drop(['Date'],1,inplace=True)
-
-# Drop the 'Date' column from the DataFrame.
-# axis=1 specifies that we are dropping a column (axis=0 would drop a row).
-# inplace=True modifies the DataFrame directly instead of creating a copy.
 df.drop(['Date'], axis=1, inplace=True)
 
 predictionDays = 30
-# Create another column shifted 'n'  units up
+
 df['Prediction'] = df[['Price']].shift(-predictionDays)
 # show the first 5 rows
 df.head()
