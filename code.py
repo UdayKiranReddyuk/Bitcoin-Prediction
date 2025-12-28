@@ -40,5 +40,5 @@ svm_prediction = svr_rbf.predict(xtest)
 svm_prediction = svr_rbf.predict(predictionDays_array)
 print(svm_prediction)
 print()
-#Print the actual price for bitcoin for last 30 days
+
 print(df.tail(predictionDays))print(svm_prediction)
