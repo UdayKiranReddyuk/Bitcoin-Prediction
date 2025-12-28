@@ -25,18 +25,18 @@ print(y)
 
 from sklearn.model_selection import train_test_split
 xtrain, xtest, ytrain, ytest = train_test_split(x,y, test_size = 0.2)
-# set the predictionDays array equal to last 30 rows from the original data set
+
 predictionDays_array = np.array(df.drop(['Prediction'], axis=1))[-predictionDays:]
 print(predictionDays_array)
 from sklearn.svm import SVR
-# Create and Train the Support Vector Machine (Regression) using radial basis function
+
 svr_rbf = SVR(kernel='rbf', C=1e3, gamma=0.00001)
 svr_rbf.fit(xtrain, ytrain)
 svr_rbf_confidence = svr_rbf.score(xtest,ytest)
 print('SVR_RBF accuracy :',svr_rbf_confidence)
-# print the predicted values
+
 svm_prediction = svr_rbf.predict(xtest)
-# Print the model predictions for the next 30 days
+
 svm_prediction = svr_rbf.predict(predictionDays_array)
 print(svm_prediction)
 print()
