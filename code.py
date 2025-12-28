@@ -8,18 +8,16 @@ df.drop(['Date'], axis=1, inplace=True)
 predictionDays = 30
 
 df['Prediction'] = df[['Price']].shift(-predictionDays)
-# show the first 5 rows
+
 df.head()
 
 df.tail()
-# Create the independent dada set
-# Here we will convert the data frame into a numpy array and drp the prediction column
-x = np.array(df.drop(['Prediction'], axis=1)) # Changed: axis=1 instead of 1
-# Remove the last 'n' rows where 'n' is the predictionDays
+
+x = np.array(df.drop(['Prediction'], axis=1)) 
+
 x = x[:len(df)-predictionDays]
 print(x)
-# Create the dependent data set
-# convert the data frame into a numpy array
+
 y = np.array(df['Prediction'])
 # Get all the values except last 'n' rows
 y = y[:-predictionDays]
