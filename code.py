@@ -7,7 +7,7 @@ df.drop(['Date'], axis=1, inplace=True)
 
 predictionDays = 30
 
-df['Prediction'] = df[['Price']].shift(-predictionDays)
+df['Prediction'] = df[['Price']].shift(-predictionDays) 
 
 df.head()
 
