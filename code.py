@@ -11,7 +11,7 @@ df['Prediction'] = df[['Price']].shift(-predictionDays)
 
 df.head()
 
-df.tail()
+df.tail() 
 
 x = np.array(df.drop(['Prediction'], axis=1)) 
 
