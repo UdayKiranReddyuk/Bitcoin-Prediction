@@ -1,4 +1,3 @@
-  
 import numpy as np
 import pandas as pd
 df = pd.read_csv("/content/drive/MyDrive/Project AIML/bitcoin.csv")
