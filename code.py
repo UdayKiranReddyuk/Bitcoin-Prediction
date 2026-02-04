@@ -1,7 +1,7 @@
 
 import numpy as np
 import pandas as pd
-df = pd.read_csv("/content/drive/MyDrive/Project AIML/bitcoin.csv")  
+df = pd.read_csv("/content/drive/MyDrive/Project AIML/bitcoin.csv") 
 df.head()
  
 df.drop(['Date'], axis=1, inplace=True)
