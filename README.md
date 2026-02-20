@@ -1,7 +1,7 @@
 # 🪙 Bitcoin Price Prediction using SVM
 
 This project demonstrates how to use **Support Vector Regression (SVR)** with a **Radial Basis Function (RBF) kernel** to predict future Bitcoin prices.  
-The model is trained on historical price data and forecasts Bitcoin’s price for the next 30 days.
+The model is trained on historical price data and forecasts Bitcoin’s price for the next 30 days. 
  
 ---
 
