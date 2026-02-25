@@ -4,7 +4,7 @@ import pandas as pd
 df = pd.read_csv("/content/drive/MyDrive/Project AIML/bitcoin.csv")
 df.head()
  
-df.drop(['Date'], axis=1, inplace=True)
+df.drop(['Date'], axis=1, inplace=True) 
 
 predictionDays = 30
 
